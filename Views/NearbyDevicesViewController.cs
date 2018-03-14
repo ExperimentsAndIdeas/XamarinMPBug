@@ -5,7 +5,7 @@ using System;
 using UIKit;
 using System.Collections.Generic;
 
-namespace AELPMP
+namespace AELPMP 
 {
     public partial class NearbyDevicesViewController : UITableViewController
     {

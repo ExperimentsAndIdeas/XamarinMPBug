@@ -16,7 +16,7 @@ namespace AELPMP
             context = new NSData();
             this.browserPeerID = myPeerID;
             this.session = sharedSession;
-        }
+        } 
 
         public override void FoundPeer(MCNearbyServiceBrowser browser, MCPeerID peerID, NSDictionary info)
         {
