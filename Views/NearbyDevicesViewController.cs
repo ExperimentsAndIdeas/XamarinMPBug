@@ -22,11 +22,9 @@ namespace AELPMP
             MyPhoneStatus.MyPeerID =  myPhoneName;
             myPeerID = new MCPeerID(myPhoneName);
 
-
+            Session = new MCSession(myPeerID);
+            Session.Delegate = new ChatSessionDelegate(Session);
             //--------------------------------Advertiser----------------------------------------------------
-            Session= new MCSession(myPeerID);
-            Session.Delegate =new ChatSessionDelegate(Session);
-
             var emptyDict = new NSDictionary();
             AppDelegate.advertiser = new MCNearbyServiceAdvertiser(myPeerID, emptyDict, SERVICE_STRING);
             AppDelegate.advertiser.Delegate = new MyNearbyAdvertiserDelegate(this);
@@ -37,7 +35,7 @@ namespace AELPMP
 
             ////--------------------------------Browser------------------------------------------------------
             //AppDelegate.browser = new MCNearbyServiceBrowser(myPeerID, SERVICE_STRING);
-            //AppDelegate.browser.Delegate = new MyBrowserDelegate(myPeerID, session);
+            //AppDelegate.browser.Delegate = new MyBrowserDelegate(myPeerID, Session);
 
             //System.Diagnostics.Debug.WriteLine("Starting browsing...");
             //AppDelegate.browser.StartBrowsingForPeers();

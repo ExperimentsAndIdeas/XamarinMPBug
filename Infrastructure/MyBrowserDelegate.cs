@@ -30,8 +30,18 @@ namespace AELPMP
                     PeerID = peerID
                 });
 
+
+            /*
+
+            // DEBUG ONLY - this IF statement is commented out while only one machine is a browse
+                .. in the real world, both machines will be Advertiser and browser.
+
+            // commented out while testing on two different machines (one is dedicated browser, other is dedicated advertiser... see NearbyDevicesViewController.cs)
+
+
+            */
             // Connect to server if the hash value is greater
-            if (browser.MyPeerID.GetNativeHash() > peerID.GetNativeHash())
+            //if (browser.MyPeerID.GetNativeHash() > peerID.GetNativeHash()) 
             {
                 System.Console.WriteLine("browser ID" + browser.MyPeerID.GetNativeHash());
                 System.Console.WriteLine("PeerID " + peerID.GetNativeHash());

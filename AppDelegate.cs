@@ -13,7 +13,7 @@ namespace AELPMP
         // class-level declarations
         public static MCNearbyServiceAdvertiser advertiser { get; set; }
         public static   MCNearbyServiceBrowser browser { get; set; }
-        //public static  MCSession session  { get; set; }
+        //public static  MCSession session  { get; set; } // maybe this only works as an instance variable?
 
 
         //public static Dictionary<string, MCPeerID> OtherPeerDict = new Dictionary<string, MCPeerID>();
